@@ -1,0 +1,1544 @@
+/*
+  Alpha edits
+*/
+
+a {
+  color: #80aaff;
+}
+
+.box {
+  margin: 0 0 0 0;
+}
+
+#banner {
+  background-attachment: unset;
+  background-color: unset;
+  background-position: unset;
+  background-repeat: unset;
+  background-size: unset;
+  padding: 0 0 1em 0; /* bottom is 1em instead of 0 because Isaac's head makes the title image taller than it looks */
+}
+
+.main {
+  padding: 0 0 0 0;
+}
+
+body {
+  background-attachment: scroll, fixed;
+  background-color: #666;
+  background-image: url("../img/overlay.png"), url("../img/banner.jpg");
+  background-position: top left, center center;
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover;
+  height: 100vh;
+}
+
+#page-wrapper {
+  position: absolute;
+  top: 3.25em;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  padding-top: 0em;
+}
+
+/*
+  New CSS added in 2021 to make the boxes expand to the full size of the screen
+*/
+
+#gui {
+  height: 100%;
+  width: 100%;
+}
+
+#title {
+  height: 100%;
+  width: 100%;
+}
+
+.lobby-half {
+  width: 100%;
+  padding-right: 1.5em;
+}
+
+.half {
+  height: calc((100% - 1.5em) / 2);
+  margin: 0 0 0 0;
+}
+
+.half-top {
+  height: 20em;
+  min-height: 20em;
+  max-height: 20em;
+  margin: 0 0 0 0;
+}
+
+.half-bottom {
+  height: calc(100% - 20em - 1.5em);
+  margin: 0 0 0 0;
+}
+
+.top-half {
+  padding-top: 1.5em;
+}
+
+.bottom-half {
+  padding-bottom: 1.5em;
+}
+
+.box-separator {
+  height: 1.5em;
+}
+
+#lobby-chat-text {
+  height: calc(100% - 3.5em);
+  /* (the height of the input box is 3.5em) */
+}
+
+/*
+  Extra classes
+*/
+
+.vertical-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+}
+
+.main {
+  overflow: auto;
+}
+
+.hotkey-indicator {
+  color: #ccddff;
+}
+
+.hidden {
+  display: none;
+}
+
+.selectable {
+  user-select: auto;
+}
+
+.padding0p5 {
+  padding-bottom: 0.5em;
+}
+
+.padding1 {
+  padding-bottom: 1em;
+}
+
+.padding1p5 {
+  padding-bottom: 1.5em;
+}
+
+.padding2 {
+  padding-bottom: 2em;
+}
+
+.padding2p5 {
+  padding-bottom: 2.5em;
+}
+
+.padding3 {
+  padding-bottom: 3em;
+}
+
+.hpadding1p5 {
+  padding-right: 1.5em;
+}
+
+.hpadding5 {
+  padding-right: 5em;
+}
+
+.button.small {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.underline {
+  border-bottom: 1px solid #e4886a;
+}
+
+/* This is needed so that we can resize the window from the top */
+#header-top {
+  background: #444;
+  color: #bbb;
+  cursor: default;
+  height: 2px;
+  left: 0;
+  line-height: 2px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/*
+  Header
+*/
+
+.drag {
+  -webkit-app-region: drag;
+}
+
+.no-drag {
+  -webkit-app-region: no-drag;
+}
+
+.header-links {
+  -moz-transition: color 0.2s ease-in-out;
+  -webkit-transition: color 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.header-links:hover {
+  color: rgba(255, 255, 255, 0.625) !important;
+}
+
+.header-links:active {
+  color: rgba(255, 255, 255, 0.375) !important;
+}
+
+.header-button-icons {
+  position: relative;
+  top: 1px;
+  right: 4px;
+}
+
+.header-window-buttons {
+  cursor: pointer;
+  margin: 0 0 0 0 !important;
+  padding: 0 0.375em 0 0.375em !important;
+}
+
+.header-window-buttons:hover {
+  color: rgba(153, 153, 153, 0.75) !important;
+}
+
+.header-window-buttons:active {
+  color: rgba(153, 153, 153, 0.25) !important;
+}
+
+#header-minimize-icon {
+  position: relative;
+  top: 4px;
+}
+
+/*
+  Title
+*/
+
+#title {
+  font-size: 16pt !important;
+}
+
+#title-subtitle {
+  margin-bottom: 0.5em !important;
+}
+
+#title-image {
+  max-width: 35%;
+  height: auto;
+  width: auto;
+}
+
+.selected-language {
+  font-weight: bolder;
+}
+
+.unselected-language {
+  cursor: pointer;
+}
+
+.selected-color {
+  font-weight: bolder;
+}
+
+.unselected-color {
+  cursor: pointer;
+}
+
+#title-ajax {
+  width: 56px;
+  height: 56px;
+  transform: scale(0.5);
+  margin: auto;
+  text-align: center;
+  padding-bottom: 8em;
+  padding-right: 6.5em;
+}
+
+.title-button-icons {
+  position: relative;
+  top: 1px;
+}
+
+#title-error {
+  display: none;
+  margin-bottom: 2em;
+  padding: 0.75em 1em 0.75em 1em;
+  background-color: #ffb3b3;
+  border-radius: 6px;
+  border: 1px solid #ff6666;
+  color: black;
+  font-size: 0.75em;
+}
+
+#title-version {
+  float: center;
+  text-align: center;
+}
+
+/*
+  Login
+*/
+
+#login {
+  font-size: 16pt !important;
+}
+
+#login-title {
+  margin-left: -3.5em;
+}
+
+#login-form {
+  margin: 0 0 0 0;
+}
+
+#login-ajax {
+  display: none;
+  position: relative;
+  bottom: 15px;
+  right: 5px;
+  width: 56px;
+  height: 56px;
+  transform: scale(0.3);
+}
+
+#login-error {
+  display: none;
+  margin-bottom: 2em;
+  padding: 0.75em 1em 0.75em 1em;
+  background-color: #ffb3b3;
+  border-radius: 6px;
+  border: 1px solid #ff6666;
+  color: black;
+  font-size: 0.75em;
+}
+
+#login-remember-checkbox-label {
+  position: relative;
+  top: 0.2em;
+}
+
+/*
+  Forgot Password
+*/
+
+#forgot {
+  display: none;
+  font-size: 16pt !important;
+}
+
+#forgot-title {
+  margin-left: -3.5em;
+}
+
+#forgot-form {
+  margin: 0 0 0 0;
+}
+
+#forgot-ajax {
+  display: none;
+  position: relative;
+  bottom: 15px;
+  right: 5px;
+  width: 56px;
+  height: 56px;
+  transform: scale(0.3);
+}
+
+#forgot-success {
+  display: none;
+  margin-bottom: 2em;
+  padding: 0.75em 1em 0.75em 1em;
+  background-color: #c2f0c2;
+  border-radius: 6px;
+  border: 1px solid #85e085;
+  color: black;
+  font-size: 0.75em;
+}
+
+#forgot-error {
+  display: none;
+  margin-bottom: 2em;
+  padding: 0.75em 1em 0.75em 1em;
+  background-color: #ffb3b3;
+  border-radius: 6px;
+  border: 1px solid #ff6666;
+  color: black;
+  font-size: 0.75em;
+}
+
+/*
+  Register
+*/
+
+#register {
+  font-size: 16pt !important;
+}
+
+#register {
+  height: calc(100% - 18em);
+  width: calc(100% - 20em);
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#register > .box {
+  height: 100%;
+  width: 100%;
+  margin-top: 10em;
+  margin-bottom: 10em;
+  margin-left: 10em;
+  margin-right: 10em;
+}
+
+#register-title {
+  margin-left: -3.5em;
+}
+
+#register-form {
+  margin: 0 0 0 0;
+}
+
+.register-note {
+  padding-top: 1.5em !important;
+}
+
+#register-ajax {
+  display: none;
+  position: relative;
+  bottom: 15px;
+  right: 5px;
+  width: 56px;
+  height: 56px;
+  transform: scale(0.3);
+}
+
+#register-submit {
+  position: relative;
+  top: 0.15em;
+}
+
+#register-error {
+  display: none;
+  margin-bottom: 2em;
+  padding: 0.75em 1em 0.75em 1em;
+  background-color: #ffb3b3;
+  border-radius: 6px;
+  border: 1px solid #ff6666;
+  color: black;
+  font-size: 0.75em;
+}
+
+#register-languages {
+  float: center;
+  margin-bottom: 0;
+}
+
+#register-color-mode {
+  float: center;
+  margin-bottom: 0;
+}
+
+/*
+  Updating
+*/
+
+.updating {
+  font-size: 16pt !important;
+  height: auto;
+  width: calc(100% - 20em);
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.updating > .box {
+  height: 60%;
+  width: 100%;
+  margin-top: 10em;
+  margin-bottom: 10em;
+  margin-left: 10em;
+  margin-right: 10em;
+}
+
+.updating-title {
+  margin-left: -3.5em;
+}
+
+.updating-ajax {
+  position: relative;
+  bottom: 15px;
+  right: 5px;
+  width: 56px;
+  height: 56px;
+  transform: scale(0.3);
+}
+
+/*
+  Chat
+*/
+
+.chat-box {
+  padding: 1em 1em 1em 1em; /* Default is 3em */
+}
+
+.chat-emote {
+  height: 1.6em; /* This is derived from how Twitch does it */
+}
+
+.chat-pm {
+  color: red;
+}
+
+.chat-server {
+  color: blue;
+}
+
+.chat-discord {
+  color: blue;
+}
+
+.chat-text {
+  overflow-y: auto;
+  overflow-wrap: break-word;
+  border-style: solid !important;
+  border-color: #e5e5e5 !important;
+  border: 1px;
+  margin-bottom: 1em;
+  padding: 0 0.5em 0 0.5em;
+}
+
+/*
+  Lobby (races)
+*/
+
+#lobby {
+  margin: 0 0 0 0;
+  height: 100%;
+  width: 100%;
+}
+
+#lobby > div > div {
+  height: 100%;
+}
+
+#lobby > div > div > section {
+  padding: 1.5em;
+  margin-bottom: 0;
+  height: 100%;
+}
+
+#lobby-current-races-box {
+  padding: 1em 1em 1em 1em; /* Default is 3em */
+}
+
+#lobby-current-races-table-wrapper {
+  height: 100%;
+  overflow-y: auto;
+}
+
+#lobby-current-races-table {
+  display: none;
+  margin: 0;
+}
+
+#lobby-current-races-table > tbody > tr > td {
+  padding: 0.25em 0.75em;
+}
+
+.circle {
+  border-radius: 50%;
+  display: inline-block;
+  width: 0.7em;
+  height: 0.7em;
+}
+
+.lobby-race-row-open {
+  -moz-transition: background-color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.lobby-race-row-open:hover {
+  background-color: #dce2ef;
+}
+
+/* This is column 1 of the lobby races table */
+.lobby-current-races-name {
+  width: 11em;
+  max-width: 11em;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* This is column 2 of the lobby races table */
+.lobby-current-races-status {
+  /*text-align: center;*/ /* If centered, it moves the circle on status change, which is disorientating */
+  width: 7em;
+  max-width: 7em;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.lobby-current-races-open {
+  background: green;
+}
+
+.lobby-current-races-starting {
+  background: blue;
+}
+
+.lobby-current-races-in-progress {
+  background: orange;
+}
+
+.lobby-current-races-finished {
+  background: white;
+  border: solid 1px black;
+}
+
+/* This is the old column 3 of the lobby races table */
+.lobby-current-races-type {
+  width: 9.9em;
+  max-width: 9.9em;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.lobby-current-races-type-icon {
+  display: inline-block;
+  position: relative;
+  bottom: 1.4em;
+  right: 0.35em;
+}
+
+.lobby-current-races-size-icon {
+  width: 1.5em;
+  display: inline-block;
+  position: relative;
+}
+
+.lobby-current-races-ranked {
+  background-image: url("../img/types/ranked.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: inline-block;
+  height: 2.1em;
+  width: 2em;
+  position: absolute;
+  transform: scale(0.85);
+}
+
+.lobby-current-races-unranked {
+  background-image: url("../img/types/unranked.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: inline-block;
+  height: 2.1em;
+  width: 2em;
+  position: absolute;
+  transform: scale(0.75);
+}
+
+/* This is column 4 of the lobby races table */
+.lobby-current-races-format {
+  width: 4.6em;
+  max-width: 4.6em;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.lobby-current-races-format-icon {
+  display: inline-block;
+  position: relative;
+  bottom: 1.4em;
+  right: 0.35em;
+}
+
+.lobby-current-races-unseeded {
+  background-image: url("../img/formats/unseeded.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: inline-block;
+  height: 2.1em;
+  width: 2em;
+  position: absolute;
+}
+
+.lobby-current-races-seeded {
+  background-image: url("../img/formats/seeded.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: inline-block;
+  height: 2.1em;
+  width: 2em;
+  position: absolute;
+}
+
+.lobby-current-races-diversity {
+  background-image: url("../img/formats/diversity.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: inline-block;
+  height: 2.1em;
+  width: 2em;
+  position: absolute;
+  transform: scale(0.75);
+}
+
+.lobby-current-races-custom {
+  background-image: url("../img/formats/custom.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: inline-block;
+  height: 2.1em;
+  width: 2em;
+  position: absolute;
+}
+
+/* This is column 5 of the lobby races table */
+.lobby-current-races-size {
+  width: 2.25em;
+  max-width: 2.25em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* This is column 6 of the lobby races table */
+.lobby-current-races-racers {
+  width: 15em;
+  max-width: 15em; /* 16 is too high and causes overflows when there are 5 races or more */
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.lobby-current-races-spacing {
+  display: inline-block;
+  width: 1.85em;
+}
+
+.lobby-current-races-format-li {
+  margin-bottom: 0.5em;
+}
+
+/*
+  Lobby (users)
+*/
+
+#lobby-users-container {
+  padding-left: 1em;
+}
+
+#lobby-users-box {
+  padding: 1em 1em 1em 1em; /* Default is 3em */
+}
+
+.users-users {
+  overflow-y: auto;
+  border-style: solid !important;
+  border-color: #e5e5e5 !important;
+  border: 1px;
+  padding: 0 0.5em 0 0.5em;
+  height: calc(100% - 2em);
+}
+
+.users-user {
+  cursor: pointer;
+}
+
+.users-user:hover {
+  font-weight: bolder;
+}
+
+#user-click-tooltip {
+  padding: 0 0 0 0;
+}
+
+#user-click-tooltip > div > div > button {
+  margin-bottom: 0;
+}
+
+/*
+  New race tooltip
+*/
+
+#new-race-tooltip {
+  padding: 2em 2em 2em 2em;
+}
+
+#new-race-form {
+  margin: 0 0 0 0;
+}
+
+#new-race-form .col-7, #new-race-form .col-8, .margin-t-1 {
+  margin-top: 1em;
+}
+
+#new-race-title {
+  width: 22em;
+}
+
+#new-race-title-error {
+  color: red;
+}
+
+.new-race-note {
+  padding-top: 2em !important;
+}
+
+#new-race-title-randomize {
+  margin-top: 0.5em !important;
+}
+
+#new-race-starting-build-container {
+  display: flex;
+}
+
+.new-race-randomize {
+  padding-top: 1.5em !important;
+}
+
+.new-race-size-icon-container {
+  position: absolute;
+}
+
+.new-race-toggle-row-container {
+  position: relative;
+  height: 3.4em;
+}
+
+.new-race-toggle-row-container > .row {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#new-race-password-row {
+  top: -16px !important;
+}
+
+.new-race-toggle-row-container > #new-race-ranked-row {
+  padding-top: 1em;
+}
+
+#new-race-size-icon-solo-i {
+  position: relative;
+  bottom: 0.2em;
+  left: 0.35em;
+}
+
+#new-race-size-icon-multiplayer-i {
+  position: relative;
+  bottom: 0.2em;
+  left: 0.20em;
+}
+
+#new-race-difficulty-icon-i {
+  position: relative;
+  bottom: 0.2em;
+  left: 0.35em;
+}
+
+#new-race-format-icon, #new-race-character-icon, #new-race-goal-icon, #new-race-starting-build-icon {
+  margin-top: 1.5em;
+}
+
+.new-race-radio-label {
+  position: relative;
+  bottom: 0.35em;
+}
+
+.new-race-radio-text {
+  position: relative;
+  top: 0.3em;
+}
+
+.new-race-icon {
+  width: 38px;
+  height: 52px !important;
+  min-height: 52px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#new-race-password-no-password-icon > .fa,
+#new-race-password-has-password-icon > .fa {
+  position: relative;
+  bottom: -0.8em;
+  left: 0.4em;
+}
+
+#new-race-ranked-icon {
+  -moz-transition: background-image 0.3s ease-in-out;
+  -webkit-transition: background-image 0.3s ease-in-out;
+  -ms-transition: background-image 0.3s ease-in-out;
+  transition: background-image 0.3s ease-in-out;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  display: inline-block;
+  height: 2.1em; /* 3em */
+  width: 3em;
+  position: relative;
+  bottom: 8px;
+}
+
+#new-race-format {
+  -moz-transition: border 0.3s ease-in-out;
+  -webkit-transition: border 0.3s ease-in-out;
+  -ms-transition: border 0.3s ease-in-out;
+  transition: border 0.3s ease-in-out;
+}
+
+#new-race-format-icon {
+  -moz-transition: background-image 0.3s ease-in-out;
+  -webkit-transition: background-image 0.3s ease-in-out;
+  -ms-transition: background-image 0.3s ease-in-out;
+  transition: background-image 0.3s ease-in-out;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  display: inline-block;
+  height: 3em;
+  width: 3em;
+  position: relative;
+  bottom: 13px; /* 3em = 53px, height of dice = 27px, 53px - 27px = 26px, 26px / 2 = 13px */
+  transform: scale(1.25);
+}
+
+#new-race-character-icon {
+  -moz-transition: background-image 0.3s ease-in-out;
+  -webkit-transition: background-image 0.3s ease-in-out;
+  -ms-transition: background-image 0.3s ease-in-out;
+  transition: background-image 0.3s ease-in-out;
+  background-repeat: no-repeat;
+  background-position: bottom center; /* using bottom since the characters have different size hair */
+  display: inline-block;
+  height: 3em;
+  width: 4.5em;
+  position: relative;
+  bottom: 10px; /* 3em = 53px, height of Isaac = 33px, 53px - 33px = 20px, 20px / 2 = 10px */
+  left: -10px; /* center char sprites because of J&E */
+}
+
+#new-race-goal {
+  -moz-transition: border 0.3s ease-in-out;
+  -webkit-transition: border 0.3s ease-in-out;
+  -ms-transition: border 0.3s ease-in-out;
+  transition: border 0.3s ease-in-out;
+}
+
+#new-race-goal-icon {
+  -moz-transition: background-image 0.3s ease-in-out;
+  -webkit-transition: background-image 0.3s ease-in-out;
+  -ms-transition: background-image 0.3s ease-in-out;
+  transition: background-image 0.3s ease-in-out;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  display: inline-block;
+  height: 3em;
+  width: 4em;
+  position: relative;
+  bottom: 12px; /* 3em = 53px, height of chest = 29px, 53px - 29px = 24px, 24px / 2 = 12px */
+  left: -5px; /* Because of Mega Satan goal icon */
+}
+
+#new-race-starting-build-icon {
+  -moz-transition: background-image 0.3s ease-in-out;
+  -webkit-transition: background-image 0.3s ease-in-out;
+  -ms-transition: background-image 0.3s ease-in-out;
+  transition: background-image 0.3s ease-in-out;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  display: inline-block;
+  height: 3em;
+  width: 3em;
+  position: relative;
+  bottom: 14px; /* manually found the right value */
+  transform: scale(1.25);
+}
+
+#new-race-starting-build-padding {
+  height: 4.2em;
+}
+
+#new-race-submit-button-icon {
+  position: relative;
+  right: 12px;
+}
+
+@media (min-width: 1281px) {
+  #new-race-format-icon, #new-race-character-icon, #new-race-goal-icon, #new-race-starting-build-icon {
+    bottom: 1.1em; /* manually found the right value */
+  }
+}
+
+@media (min-width: 1681px) {
+  #new-race-format-icon, #new-race-character-icon, #new-race-goal-icon, #new-race-starting-build-icon {
+    bottom: 1.3em; /* manually found the right value */
+  }
+}
+
+/*
+  Settings tooltip
+*/
+
+.checkbox-text {
+  position: relative;
+  top: 0.25em;
+}
+
+#settings-tooltip {
+  padding: 2em 2em 2em 2em;
+}
+
+#settings-form {
+  margin-bottom: 0;
+}
+
+#settings-username {
+  font-weight: bolder;
+}
+
+#settings-log-out {
+  position: relative;
+  bottom: 0.5em;
+  right: 0.75em;
+}
+
+#settings-version {
+  font-weight: bolder;
+}
+
+#settings-language {
+  width: 9em;
+  background: #f8f8f8;
+}
+
+#settings-color-mode {
+  width: 9em;
+  background: #f8f8f8;
+}
+
+#settings-volume {
+  margin-bottom: auto;
+}
+
+#settings-volume-slider-value {
+  width: 3em;
+}
+
+#settings-test-button {
+  margin-top: -0.5em;
+}
+
+#settings-twitch-bot li {
+  margin: auto;
+}
+
+#settings-username-capitalization {
+  width: 10em;
+}
+
+#settings-stream-url {
+  width: 20em;
+}
+
+#settings-stream-url-error {
+  color: red;
+}
+
+/* Necessary so that the checkbox is in line with the delay text box */
+#settings-enable-twitch-bot-checkbox-container {
+  position: relative;
+  top: 0.25em;
+}
+
+#settings-enable-twitch-bot-checkbox-tooltip {
+  text-align: center;
+  line-height: 1.5;
+}
+
+#settings-twitch-bot-delay {
+  width: 5em;
+}
+
+#settings-twitch-bot-delay-error {
+  color: red;
+}
+
+/* From https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/ */
+
+input[type=range] {
+  -webkit-appearance: slider-horizontal; /* Hides the slider so that custom slider can be made */
+  background: black; /* Otherwise white in Chrome */
+}
+
+
+/*
+  Race (title table)
+*/
+
+#race {
+  margin: 0 0 0 0;
+  height: 100%;
+  width: 100%;
+}
+
+#race > div > div {
+  height: 100%;
+}
+
+#race > div > div > section {
+  padding: 1.5em;
+  margin-bottom: 0;
+  height: 100%;
+}
+
+#race-row {
+  height: 100%;
+}
+
+#race-top-left-row {
+  height: calc((100% - 1.5em) * 0.33);
+  width: 100%;
+  padding-top: 1.5em;
+  padding-left: 1.5em;
+  padding-right: 0em;
+  margin-right: 0em;
+}
+
+#race-bottom-left-row {
+  height: calc((100% - 1.5em) * 0.5);
+  width: 100%;
+  padding-top: 1.5em;
+  padding-left: 1.5em;
+  padding-right: 0em;
+  margin-right: 0em;
+}
+
+#race-chat-row {
+  height: 100%;
+  padding-top: 1.5em;
+  padding-right: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+#race-chat-row .col-12 {
+  max-height: -webkit-fill-available;
+}
+
+#race-chat-box {
+  height: 100%;
+}
+
+#race-chat-text {
+  height: calc(100% - 4em);
+}
+
+#race-title-table {
+  margin: 0;
+}
+
+#race-title-table th {
+  text-align: center;
+}
+
+#race-title-table > tbody > tr > td {
+  padding: 0.25em 0.75em;
+}
+
+.race-title-icon-container {
+  position: relative;
+  display: inline-block;
+  bottom: 1.35em;
+  right: 1.4em;
+}
+
+.race-title-icon {
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: inline-block;
+  height: 2em;
+  width: 3em;
+  position: absolute;
+}
+
+#race-title-items {
+  width: 6em;
+}
+
+.race-title-items-icon-blind {
+  background-image: url("../img/items/questionmark.png"); /* cspell:disable-line */
+}
+
+/*
+  The next 3 are used for diversity items
+*/
+
+.race-title-icon-container1 {
+  position: relative;
+  display: inline-block;
+  bottom: 1.35em;
+  right: 2.9em;
+}
+
+.race-title-icon-container2 {
+  position: relative;
+  display: inline-block;
+  bottom: 1.35em;
+  right: 1.4em;
+}
+
+.race-title-icon-container3 {
+  position: relative;
+  display: inline-block;
+  bottom: 1.35em;
+  right: -0.1em;
+}
+
+/*
+  Race (title controls)
+*/
+
+#race-title-box {
+  height: 100%;
+  text-align: center;
+  padding: 1.5em 1.5em 1.5em 1.5em;
+}
+
+#race-title-controls-container {
+  margin-top: 1.2em;
+  font-size: 1.25em;
+  height: 2.5em;
+}
+
+#race-title-controls-container ul.actions {
+  justify-content: center;
+}
+
+#race-ready-checkbox-text {
+  position: relative;
+  top: 0.2em;
+}
+
+#race-countdown {
+  position: relative;
+}
+
+#race-quit-button-container {
+  padding: 0 0 0 0;
+}
+
+#race-num-left {
+  margin: 0 0 0 0;
+}
+
+/*
+  Race (participants)
+*/
+
+#race-participants-box {
+  height: 100%;
+  padding: 1.5em 1.5em 1.5em 1.5em;
+}
+
+#race-participants-table-wrapper {
+  height: 100%;
+  overflow-y: auto;
+}
+
+#race-participants-table {
+  margin: 0;
+}
+
+#race-participants-table > tbody > tr > td {
+  padding: 0.25em 0.75em;
+}
+
+.race-participants-table-item {
+  text-align: center;
+}
+
+.race-participants-table-starting-item-icon-container {
+  position: relative;
+  display: inline-block;
+  bottom: 1.35em;
+  right: 1.4em;
+}
+
+.race-participants-table-starting-item-icon {
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: inline-block;
+  height: 2em;
+  width: 3em;
+  position: absolute;
+}
+
+.race-participants-table-self-row {
+background-color: #cce6ff !important;
+}
+
+/*
+  Race (chat)
+*/
+
+/*
+  Modals
+*/
+
+.modal {
+  font-size: 16pt !important;
+  position: absolute;
+  z-index: 1;
+  top: 5em;
+  left: 5em;
+  right: 5em;
+  bottom: 5em;
+  overflow: auto;
+}
+
+#error-modal-description {
+  margin-bottom: 3em;
+}
+
+#error-modal-description ul {
+  margin-bottom: 0;
+}
+
+#log-file-link {
+  cursor: pointer;
+}
+
+/*
+    Ajax circle
+*/
+
+@-webkit-keyframes uil-ring-anim {
+  0% {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100% {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes uil-ring-anim {
+  0% {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100% {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes uil-ring-anim {
+  0% {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100% {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+  }
+}
+
+@-ms-keyframes uil-ring-anim {
+  0% {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100% {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes uil-ring-anim {
+  0% {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100% {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes uil-ring-anim {
+  0% {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100% {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+  }
+}
+
+@-o-keyframes uil-ring-anim {
+  0% {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100% {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes uil-ring-anim {
+  0% {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100% {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+  }
+}
+
+.ajax-ring {
+  width: 160px;
+  height: 160px;
+  border-radius: 80px;
+  box-shadow: 0 6px 0 0 #59ebff;
+  -ms-animation: uil-ring-anim 1s linear infinite;
+  -moz-animation: uil-ring-anim 1s linear infinite;
+  -webkit-animation: uil-ring-anim 1s linear infinite;
+  -o-animation: uil-ring-anim 1s linear infinite;
+  animation: uil-ring-anim 1s linear infinite;
+}
+
+/*
+  Local Google Fonts
+  From: https://google-webfonts-helper.herokuapp.com/
+*/
+
+/* source-sans-pro-300 - latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Source Sans Pro Light'), local('SourceSansPro-Light'),
+       url('../webfonts/source-sans-pro-v11-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../webfonts/source-sans-pro-v11-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* source-sans-pro-300italic - latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Source Sans Pro Light Italic'), local('SourceSansPro-LightItalic'),
+       url('../webfonts/source-sans-pro-v11-latin-300italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../webfonts/source-sans-pro-v11-latin-300italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* source-sans-pro-regular - latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'),
+       url('../webfonts/source-sans-pro-v11-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../webfonts/source-sans-pro-v11-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* source-sans-pro-italic - latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Source Sans Pro Italic'), local('SourceSansPro-Italic'),
+       url('../webfonts/source-sans-pro-v11-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../webfonts/source-sans-pro-v11-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/*
+  Notes:
+  - blue of the cross is #435D91
+  - 3 shades darker: #304369
+*/

@@ -1,68 +1,57 @@
+// This is the configuration file for ESLint, the TypeScript linter
+// https://eslint.org/docs/user-guide/configuring
 module.exports = {
-  // The linter base is the airbnb style guide, located here:
-  // https://github.com/airbnb/javascript
-  'extends': 'airbnb-base',
+  extends: [
+    // The linter base is the shared IsaacScript config
+    // https://github.com/IsaacScript/eslint-config-isaacscript/blob/main/base.js
+    "eslint-config-isaacscript/base",
+  ],
 
-  'env': {
-    'browser': true,
-    'node': true,
-    'es6': true,
-    'jquery': true,
+  ignorePatterns: [
+    "dist/**", // Don't bother linting the compiled output
+    "src/main/lib/greenworks.js", // Don't bother linting the Greenworks library
+  ],
+
+  parserOptions: {
+    // ESLint needs to know about the project's TypeScript settings in order for TypeScript-specific
+    // things to lint correctly
+    // We do not point this at "./tsconfig.json" because certain files (such at this file) should be
+    // linted but not included in the actual project output
+    project: "./tsconfig.eslint.json",
+  },
+
+  settings: {
+    // This is needed in Electron projects to stop the following error:
+    // 'electron' should be listed in the project's dependencies, not devDependencies
+    "import/core-modules": ["electron"],
   },
 
   // We modify the base for some specific things
-  'rules': {
-    // airbnb uses 2 spaces, but it is harder to read block intendation at a glance
-    'indent': ['warn', 4],
+  rules: {
+    // Documentation:
+    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-cycle.md
+    // Defined at:
+    // https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb-base/rules/imports.js
+    // Unfortunately, this project has cyclical dependencies
+    "import/no-cycle": "off",
 
-    // Atom's ruler allows for less formal line length validation;
-    // in some situations, it introduces unneeded complexity to break up a line
-    'max-len': ['off'],
-
-    // The client makes heavy use of the console
-    'no-console': ['off'],
-
-    // Proper use of continues can reduce indentation for long blocks of code
-    'no-continue': ['off'],
-
-    // The client passes around data that is meant to be mutable
-    'no-param-reassign': ['off'],
-
-    // I need to disable this because I'm not quite sure how to refactor around it
-    'no-use-before-define': ['off'],
-
-    // airbnb disallows these because it can lead to errors with minified code;
-    // we don't have to worry about this in for loops though
-    'no-plusplus': ['error', {
-        'allowForLoopAfterthoughts': true,
-    }],
-
-    // Clean code can arise from for-of statements if used properly
-    'no-restricted-syntax': ['off', 'ForOfStatement'],
-
-    // Most people turn off this setting
-    'no-mixed-operators': ['off'],
-
-    // It can be bad to remove unused arguments from a function copied an API example
-    'no-unused-vars': ['warn', {
-        'vars': 'local',
-        'args': 'none',
-    }],
-
-    // This is recommended here:
-    // https://blog.javascripting.com/2015/09/07/fine-tuning-airbnbs-eslint-config/
-    // (airbnb doesn't include this by default for some reason)
-    'quote-props': ['warn', 'consistent-as-needed'],
-
-    // Object destructuring can lead to more confusing code, especially for beginners to JavaScript
-    'prefer-destructuring': ['off'],
-
-    // This is stupid
-    'operator-linebreak': ['off'],
-  },
-
-  'globals': {
-    'Lang': true,
-    'nodeRequire': true,
+    // Documentation:
+    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unused-modules.md
+    // Not defined in parent configs
+    // This helps to find dead code that should be deleted
+    "import/no-unused-modules": [
+      "error",
+      {
+        missingExports: true,
+        unusedExports: true,
+        ignoreExports: [
+          "src/**/*.d.ts",
+          ".eslintrc.js",
+          "webpack.*.config.js",
+          "src/main/main.ts",
+          "src/renderer/main.ts",
+        ],
+      },
+    ],
   },
 };
